@@ -45,6 +45,7 @@
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -97,6 +98,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox1.Location = new System.Drawing.Point(38, 34);
             this.textBox1.Multiline = true;
@@ -107,9 +109,9 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button5.Location = new System.Drawing.Point(99, 290);
+            this.button5.Location = new System.Drawing.Point(160, 286);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(166, 37);
+            this.button5.Size = new System.Drawing.Size(105, 52);
             this.button5.TabIndex = 9;
             this.button5.Text = "=";
             this.button5.UseVisualStyleBackColor = true;
@@ -217,13 +219,24 @@
             // button15
             // 
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button15.Location = new System.Drawing.Point(38, 290);
+            this.button15.Location = new System.Drawing.Point(38, 286);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(55, 37);
+            this.button15.Size = new System.Drawing.Size(55, 52);
             this.button15.TabIndex = 19;
             this.button15.Text = "0";
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.buttonnum0_Click);
+            // 
+            // button16
+            // 
+            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button16.Location = new System.Drawing.Point(99, 288);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(55, 50);
+            this.button16.TabIndex = 20;
+            this.button16.Text = "DEL";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.buttondel_Click);
             // 
             // Form1
             // 
@@ -232,6 +245,7 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(300, 400);
+            this.Controls.Add(this.button16);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.button13);
@@ -252,6 +266,7 @@
             this.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::teszt1.Properties.Settings.Default, "sss", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.Name = "Form1";
             this.Text = global::teszt1.Properties.Settings.Default.sss;
+            this.Click += new System.EventHandler(this.buttondel_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,6 +290,7 @@
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button16;
     }
 }
 

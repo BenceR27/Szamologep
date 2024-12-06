@@ -95,5 +95,10 @@ namespace teszt1
         {
             textBox1.Text = Convert.ToString((decimal)textBox1.Text.EvalNumerical());
         }
+
+        private void buttondel_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
+        }
     }
 }
